@@ -1,0 +1,260 @@
+body {
+    background-color: var(--purple-25);
+    min-height: 100vh;
+    margin: auto;
+    scroll-behavior: smooth;
+}
+
+.plans__container--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.plans__container--header-text {
+    font-size: var(--h3);
+    font-weight: 700;
+    color: var(--dark-100);
+    cursor: default;
+}
+
+.plans__container--header-toggles {
+    font-size: var(--h7);
+    color: var(--dark-75);
+}
+
+.status {
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.status:hover {
+    /* font-weight: 500; */
+    color: var(--purple-100);
+}
+
+.individual__plan {
+    /* background-color: var(--light-100); */
+    overflow: hidden;
+    gap: 20px;
+    /* border-style: solid;
+    border-color: var(--dark-25);
+    border-radius: 13px;
+    border-width: 1.5px; */
+    /* padding: 20px; */
+    /* margin-bottom: 20px; */
+}
+
+.util__buttons {
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.delete__icon, .edit__icon {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.delete,.edit {
+    height: 20px;
+}
+.edit__icon:hover,.delete__icon:hover {
+    background-color: var(--dark-50);
+}
+.edit__icon:active,.delete__icon:active {
+    filter: contrast(20%);
+
+}
+
+.check {
+    align-items: center;
+    gap: 10px;
+}
+
+.check input {
+    width: 30px;
+    height: 40px;
+    border: 2px solid var(--dark-50);
+    display: inline-block;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+}
+
+.check--label {
+    font-size: var(--h8);
+    color: var(--dark-75);
+    cursor: pointer;
+}
+
+
+.plan {
+    background-color: var(--light-100);
+    gap: 20px;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: var(--dark-25);
+    border-radius: 13px;
+    border-width: 1.5px;
+    padding: 30px;
+    margin-bottom: 20px;
+    /* overflow: hidden; */
+    /* cursor: pointer; */
+}
+
+.plan:focus{
+    outline: 2px solid #007bff;
+}
+
+.plan:hover{
+    /* border-color: var(--dark-100); */
+    /* border-width: 2px; */
+}
+
+
+.plan--title {
+    overflow: hidden;
+    font-size: var(--h6);
+    font-weight: 800;
+    color: var(--dark-100);
+    cursor: default;
+}
+
+.plan--description {
+    overflow: hidden;
+    font-size: var(--h7);
+    color: var(--dark-75);
+}
+
+.plan--dates {
+    font-size: var(--h8);
+    font-weight: 600;
+    color: var(--date-1);
+    gap: 20px;
+    cursor: default;
+}
+
+.plan--dates input {
+    padding: 3px 5px;
+    border-style: solid;
+    border-radius: 6px;
+    border-color: var(--dark-25);
+    font-family: 'Poppins';
+    font-size: var(--h8);
+    cursor: pointer;
+}
+
+.add__button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: var(--dark-75);
+    box-shadow: var(--shadow-1);
+}
+
+.form__header {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cancel__button {
+    height: 30px;
+    padding: 7px;
+    border-radius: 50px;
+    background-color: var(--light-100);
+    cursor: pointer;
+}
+
+.addPlan__form {
+    gap: 20px
+}
+
+.form--input {
+    font-family: var(--font);
+    padding-right: 15px;
+}
+
+.form--input.textarea {
+    height: 100px;
+    resize: none;
+    padding-top: 10px;
+}
+
+.addPlan__buttons {
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+/* 
+! add plan modal
+*/
+
+.addPlan__container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.addPlan__content {
+    background-color: var(--light-100);
+    border-radius: 13px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: var(--shadow-2);
+    position: relative;
+    /* gap: 15px; */
+}
+
+/* 
+! No plans message
+*/
+
+.temp--flex {
+    height: 70vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    border-style: none;
+}
+
+.no--plan--message {
+    align-self: center;
+    justify-self: center;
+    font-size: var(--h4);
+    margin: auto;
+}
+
+/* 
+! media queries
+*/
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+  .util__buttons {
+    align-self: center;
+  }
+  .add__button {
+    width: 50px;
+    height: 50px;
+  }
+}
