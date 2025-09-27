@@ -1,0 +1,24 @@
+body {
+    display: grid;
+    /* min-height: 100vh; */
+}
+
+.section__content {
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    gap: 20px;
+    height: 80vh;
+}
+
+.section__content--slogan {
+    font-size: var(--main);
+    font-weight: 700;
+    color: var(--dark-100);
+}
+
+.section__content--text {
+    font-size: var(--h6);
+    margin-bottom: 20px;
+}
+
