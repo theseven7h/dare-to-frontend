@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/designSystem.css">
+    <link rel="stylesheet" href="./dashboard.css">
+    <title>Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+</head>
+<body>
+    <div class="navbar__container row-flex sticky">
+        <div class="navbar__logo">
+            <img src="/images/logo.png" alt="" class="navbar__logo--image">
+            <div class="navbar__logo--text">dareTo</div>
+        </div>
+        
+        <button type="submit" class="logout--btn white__link-btn hover">Logout</button>
+    </div>
+
+    <div class="plans__container container">
+        <div class="plans__container--header row-flex">
+            <div class="plans__container--header-text">My Plans</div>
+            <div class="plans__container--header-toggles row-flex">
+                <div class="status active" data-attribute="all-plans">All Plans</div>
+                <div class="status" data-attribute="complete">Completed</div>
+                <div class="status" data-attribute="incomplete">Incomplete</div>
+            </div>
+        </div>
+
+<!-- 
+! All plans  >>>>>>>>>>>>>>>>>>>>       
+-->
+        <div class="no--plan--message hidden">No Plans Here</div>
+
+        <div class="plans__body" id="all-plans">
+
+            
+            
+        </div>
+        <img class="add__button hover" src="/images/add.png">
+<!-- 
+! All plans End  >>>>>>>>>>>>>>>>>>>>>>    
+-->
+
+        <div class="plans__body hidden" id="complete">
+            <!-- <div class="plan row-flex">
+                <div class="individual__plan column-flex">
+                    <div class="plan--title">Grocery Shopping</div>
+                    <div class="plan--description">Buy groceries for the week Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sequi. Voluptatem non id cum corporis, quia mollitia! Quibusdam, provident nam praesentium corrupti odio vel nesciunt rem sed ipsa! Obcaecati nemo nihil repellendus, doloremque, dolores odio totam, velit quisquam quod atque neque facilis numquam. Voluptates assumenda labore, dolor nisi ut veniam!</div>
+                    <div class="plan--dates row-flex">
+                        <div class="plan--start">Start: 2026-02-01</div>
+                        <div class="plan--end">End: 2026-11-11</div>
+                        <div class="plan--status-lastModified">Last Modified: 2026-09-06 04:45</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+        <div class="plans__body hidden" id="incomplete">
+            <!-- <div class="plan row-flex">
+                <div class="individual__plan column-flex">
+                    <div class="plan--title">Grocery Shopping</div>
+                    <div class="plan--description">Buy groceries for the week Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, sequi. Voluptatem non id cum corporis, quia mollitia! Quibusdam, provident nam praesentium corrupti odio vel nesciunt rem sed ipsa! Obcaecati nemo nihil repellendus, doloremque, dolores odio totam, velit quisquam quod atque neque facilis numquam. Voluptates assumenda labore, dolor nisi ut veniam!</div>
+                    <div class="plan--dates row-flex">
+                        <div class="plan--start">Start: 2026-02-01</div>
+                        <div class="plan--end">End: 2026-10-11</div>
+                        <div class="plan--status-lastModified">Last Modified: 2026-11-06 04:45</div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+
+    </div>
+
+</body>
+<div class="addPlan__container">
+    <div class="addPlan__content column-flex">
+        <div class="form__header row-flex">
+            <div class="addPlan__content--header form__head">Add New Plan</div>
+            <img class="cancel__button hover" src="/images/blackCancel.png" alt="">
+        </div>
+        <form class="addPlan__form individual__form">
+            <div class="form--group column-flex">
+                <label for="title" class="form--label form__label">Title</label>
+                <input required type="text" name="title" id="form--title" class="form--input form__input" placeholder="Enter plan title">
+            </div>
+            <div class="form--group column-flex">
+                <label for="description" class="form--label form__label">Description</label>
+                <textarea required name="description" id="form--description" class="form--input textarea form__input" placeholder="Enter plan description"></textarea>
+            </div>
+            <div class="form--group column-flex">
+                <label for="startDate" class="form--label form__label">Start Date</label>
+                <input type="date" name="startDate" id="form--startDate" class="form--input form__input">
+            </div>
+            <div class="form--group column-flex">
+                <label for="endDate" class="form--label form__label">End Date</label>
+                <input type="date" name="endDate" id="form--endDate" class="form--input form__input">
+            </div>
+        </form>
+        <div class="addPlan__buttons row-flex">
+            <!-- <div class="cancel__btn white__link-btn hover">Cancel</div> -->
+            <button type="submit" class="save--btn btn purple__link-btn hover">Save</button>
+            <script src="/dashboard/dashboard.js"></script>
+        </div>
+    </div>
+</div>
+</html>
