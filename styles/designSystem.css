@@ -1,0 +1,299 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+    --font: 'Poppins', sans-serif;
+
+
+    --purple-100: rgba(151, 111, 194, 1);
+    --purple-75: rgba(151, 111, 194, 0.75);
+    --purple-50: rgba(151, 111, 194, 0.5);
+    --purple-25: rgba(151, 111, 194, 0.25);
+
+    --dark-100: rgba(30, 41, 59, 1);
+    --dark-75: rgba(30, 41, 59, 0.75);
+    --dark-50: rgba(30, 41, 59, 0.5);
+    --dark-25: rgba(30, 41, 59, 0.25);
+   
+    --light-100: rgba(248, 250, 252, 1);
+    --light-75: rgba(248, 250, 252, 0.75);
+    --light-50: rgba(248, 250, 252, 0.5);
+    --light-25: rgba(248, 250, 252, 0.25);
+    
+    --date-1: rgba(64, 52, 233, 0.75);
+     
+
+    --main: 64px;
+    --h1: 48px;
+    --h2: 40px;
+    --h3: 32px;
+    --h4: 28px;
+    --h5: 24px;
+    --h6: 20px;
+    --h7: 16px;
+    --h8: 12px;
+
+    --shadow-1: 3px 4px 12px 1px rgba(0, 0, 0, 0.25);
+    --shadow-2: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
+    --shadow-3: 0px 4px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    background-color: var(--purple-25);
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+/**
+*  ! rules for display
+**/
+.column-flex {
+    display: flex;
+    flex-direction: column;
+}
+.row-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.grid {
+    display: grid;
+}
+
+
+/** 
+* ! rules for navbar
+**/
+
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--light-100);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    height: 10vh;
+    align-self: start;
+}
+
+.navbar__logo--image {
+    /* width: 40px; */
+    height: 30px;
+    margin-right: 10px;
+}
+
+.navbar__logo--text {
+    font-size: var(--h5);
+    font-weight: 600;
+    color: var(--dark-100);
+}
+.navbar__logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.login__register--container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.add__button {
+    border-style: none;
+    border-radius: 100px;
+    background-color: var(--purple-100);
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-3);
+}
+
+
+/*  
+! rules for buttons
+*/
+
+.purple__link-btn {
+    background-color: var(--purple-100);
+    text-decoration: none;
+    color: var(--light-100);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-family: 'Poppins';
+    font-size: var(--h7);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.white__link-btn {
+    background-color: var(--light-50);
+    text-decoration: none;
+    color: var(--dark-100);
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: var(--h7);
+    font-weight: 600;
+    font-family: 'Poppins';
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hover:hover {
+    filter: brightness(85%);
+}
+
+/* 
+! rules for footer
+*/
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--light-100);
+    padding-bottom: 10px;
+    padding-top: 10px;
+    height: 10vh;
+    align-self: end;
+}
+
+.footer--text {
+    font-size: var(--h7);
+    font-weight: 400;   
+    color: var(--dark-75);
+}
+
+/* 
+! rules for media queries
+*/
+@media (max-width: 1200px) {
+  .container {
+    max-width: 970px;
+  }
+
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 740px;
+  }
+
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .plan {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* 
+! rules for forms
+*/
+
+.form__head {
+    font-size: var(--h4);
+    font-weight: 100px;
+    color: var(--dark-100);
+    font-weight: bold;
+}
+.form__subhead {
+    font-size: var(--h7);
+    color: var(--dark-75);
+}
+
+.individual__form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    width: 90%;
+    margin: auto;
+    gap: 20px;
+}
+
+.form__label {
+    display: block;
+    font-size: var(--h8);
+    font-weight: 500;
+}
+.form__input {
+    width: 100%;
+    height: 40px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: var(--purple-100);
+    padding-left: 20px;
+}
+
+/* 
+! rules for dashboard
+*/
+
+.hidden {
+    display: none;
+}
+
+.active {
+    background-color: var(--dark-50);
+    color: var(--dark-100);
+}
+.status.active:hover {
+    color: var(--dark-100);
+}
+
+/* 
+! Rules for user messages
+*/
+
+.good--message {
+    background-color: rgba(122, 223, 122, 0.9);
+    color: rgb(5, 87, 5);
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.bad--message {
+    background-color: rgba(247, 141, 141, 0.9);
+    color: rgb(150, 16, 16);
+    padding: 3px 10px;
+    border-radius: 5px;
+}
