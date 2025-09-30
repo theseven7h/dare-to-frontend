@@ -61,3 +61,16 @@ body {
     font-size: var(--h7);
     font-weight: 500;
 }
+
+.forgotPassword {
+    color: var(--dark-100);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.forgotPassword:hover {
+    /* color: var(--purple-100); */
+    text-decoration: underline;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+}
