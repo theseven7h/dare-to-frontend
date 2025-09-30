@@ -36,6 +36,9 @@ document.getElementById('register--form').addEventListener('submit', async funct
         message.classList.add('bad--message')
         message.classList.remove('hidden');
         message.style.display = 'flex';
+        setTimeout(() => {
+            message.classList.add('hidden');
+        }, 1000);
     }
 });
 
