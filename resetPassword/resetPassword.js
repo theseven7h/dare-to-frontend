@@ -24,19 +24,18 @@ document.getElementById('resetPassword--form').addEventListener('submit', async 
             body: JSON.stringify({ token, email, password: confirmPassword })
         });
 
-        const text = await response.text();   // get raw text
+        const text = await response.text(); 
         let data;
         try {
-            data = JSON.parse(text); // try to parse JSON
+            data = JSON.parse(text); 
         } catch {
-            data = { message: text }; // fallback if not JSON
+            data = { message: text }
         }
 
         if (!response.ok) {
             throw new Error(data.message || response.statusText || "Failed to reset password");
         }
 
-        // Success
         message.innerHTML = data.message || "Password reset successfully";
         message.style.display = 'flex';
         message.classList.remove('hidden');
@@ -47,7 +46,6 @@ document.getElementById('resetPassword--form').addEventListener('submit', async 
         }, 1000);
 
     } catch (err) {
-        // Error
         message.innerText = err.message;
         message.classList.add('bad--message');
         message.classList.remove('hidden');
